@@ -54,6 +54,9 @@ export function App() {
         <span className="app__note">
           Horarios en tu zona horaria local · Desliza para ver todo el cuadro
         </span>
+        <span className="app__privacy">
+          Analítica anónima con Cloudflare · sin cookies ni datos personales
+        </span>
       </footer>
     </div>
   )

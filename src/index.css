@@ -595,6 +595,12 @@ body {
   margin-left: auto;
   color: var(--text-faint);
 }
+.app__privacy {
+  width: 100%;
+  color: var(--text-faint);
+  font-size: 0.7rem;
+  opacity: 0.75;
+}
 
 /* ————— Aparición escalonada de columnas ————— */
 @media (prefers-reduced-motion: no-preference) {
