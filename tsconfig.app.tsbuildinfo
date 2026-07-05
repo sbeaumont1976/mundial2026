@@ -1,1 +1,0 @@
-{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/bracket.tsx","./src/components/flag.tsx","./src/components/matchcard.tsx","./src/components/roundcolumn.tsx","./src/components/teamrow.tsx","./src/data/mockbracket.ts","./src/hooks/usebracket.ts","./src/lib/supabase.ts","./src/types/bracket.ts","./src/utils/datetime.ts"],"version":"5.9.3"}

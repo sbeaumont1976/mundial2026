@@ -64,7 +64,7 @@ export interface Bracket {
 
 export type ResolvedSide =
   | { kind: 'team'; team: Team }
-  | { kind: 'pending'; label: string }
+  | { kind: 'pending'; label: string; candidates: Team[] }
 
 export type Side = 'home' | 'away'
 
@@ -96,16 +96,54 @@ export function resolveSlot(
     const team = bracket.teams[slot.teamId]
     return team
       ? { kind: 'team', team }
-      : { kind: 'pending', label: 'Por determinar' }
+      : { kind: 'pending', label: 'Por determinar', candidates: [] }
   }
 
   const source = byId.get(slot.winnerOf)
-  if (!source) return { kind: 'pending', label: 'Por determinar' }
+  if (!source) return { kind: 'pending', label: 'Por determinar', candidates: [] }
 
   const w = winnerSide(source)
   if (!w) {
     const roundLabel = ROUNDS.find((r) => r.id === source.round)?.short ?? ''
-    return { kind: 'pending', label: `Ganador ${roundLabel} · P${source.order}` }
+    return {
+      kind: 'pending',
+      label: `Ganador ${roundLabel} · P${source.order}`,
+      candidates: possibleTeams(slot, bracket, byId),
+    }
   }
   return resolveSlot(w === 'home' ? source.home : source.away, bracket, byId)
+}
+
+/**
+ * Equipos que todavía pueden ocupar un `Slot` sin resolver. Recorre el árbol
+ * de `winnerOf` hacia atrás recolectando las hojas; si un partido intermedio
+ * ya terminó, poda esa rama al ganador. Cuartos → 2, semis → 4, final → 8…,
+ * reduciéndose según avanzan las rondas.
+ */
+export function possibleTeams(
+  slot: Slot,
+  bracket: Bracket,
+  byId: Map<string, Match>,
+): Team[] {
+  const found = new Map<string, Team>()
+
+  const visit = (s: Slot) => {
+    if ('teamId' in s) {
+      const team = bracket.teams[s.teamId]
+      if (team) found.set(team.id, team)
+      return
+    }
+    const source = byId.get(s.winnerOf)
+    if (!source) return
+    const w = winnerSide(source)
+    if (w) {
+      visit(w === 'home' ? source.home : source.away)
+      return
+    }
+    visit(source.home)
+    visit(source.away)
+  }
+
+  visit(slot)
+  return [...found.values()]
 }

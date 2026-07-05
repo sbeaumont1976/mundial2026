@@ -1,8 +1,8 @@
-import type { ResolvedSide } from '../types/bracket'
+import type { Team } from '../types/bracket'
 import { Flag } from './Flag'
 
 interface TeamRowProps {
-  side: ResolvedSide
+  team: Team
   score: number | null
   /** Penaltis de este lado, si hubo tanda */
   pen: number | null
@@ -11,24 +11,19 @@ interface TeamRowProps {
   decided: boolean
 }
 
-export function TeamRow({ side, score, pen, isWinner, decided }: TeamRowProps) {
-  const isPending = side.kind === 'pending'
-  const name = side.kind === 'team' ? side.team.name : side.label
-  const code = side.kind === 'team' ? side.team.code : undefined
-
+export function TeamRow({ team, score, pen, isWinner, decided }: TeamRowProps) {
   const classes = [
     'team',
     isWinner && 'team--winner',
     decided && !isWinner && 'team--out',
-    isPending && 'team--pending',
   ]
     .filter(Boolean)
     .join(' ')
 
   return (
     <div className={classes}>
-      <Flag code={code} title={name} />
-      <span className="team__name">{name}</span>
+      <Flag code={team.code} title={team.name} />
+      <span className="team__name">{team.name}</span>
       {pen !== null && <span className="team__pen">({pen})</span>}
       <span className="team__score">{score ?? ''}</span>
     </div>
