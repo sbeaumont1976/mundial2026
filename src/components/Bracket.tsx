@@ -42,7 +42,12 @@ export function Bracket({ data }: BracketProps) {
     const groups = new Map<RoundId, Match[]>()
     for (const round of ROUNDS) groups.set(round.id, [])
     for (const match of data.matches) groups.get(match.round)?.push(match)
-    for (const list of groups.values()) list.sort((a, b) => a.order - b.order)
+    // Orden cronológico dentro de cada ronda (con `order` como desempate)
+    for (const list of groups.values())
+      list.sort(
+        (a, b) =>
+          Date.parse(a.kickoff) - Date.parse(b.kickoff) || a.order - b.order,
+      )
     return groups
   }, [data.matches])
 
