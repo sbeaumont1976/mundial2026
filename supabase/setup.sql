@@ -121,9 +121,9 @@ insert into mundial2026.matches
   (id, round, "order", kickoff, venue,
    home_team, home_winner_of, away_team, away_winner_of,
    home_score, away_score, pen_home, pen_away, status) values
-  ('m32_1',  'r32', 1,  '2026-06-28T12:00:00-07:00', 'SoFi Stadium · Los Ángeles',        'za', null, 'ca', null, 0, 1, null, null, 'finished'),
-  ('m32_2',  'r32', 2,  '2026-06-29T12:00:00-05:00', 'NRG Stadium · Houston',             'br', null, 'jp', null, 2, 1, null, null, 'finished'),
-  ('m32_3',  'r32', 3,  '2026-06-29T16:30:00-04:00', 'Gillette Stadium · Boston',         'de', null, 'py', null, 1, 1, 3, 4, 'finished'),
+  ('m32_1',  'r32', 1,  '2026-06-28T21:00:00+02:00', 'SoFi Stadium · Los Ángeles',        'za', null, 'ca', null, 0, 1, null, null, 'finished'),
+  ('m32_2',  'r32', 2,  '2026-06-29T19:00:00+02:00', 'NRG Stadium · Houston',             'br', null, 'jp', null, 2, 1, null, null, 'finished'),
+  ('m32_3',  'r32', 3,  '2026-06-29T22:30:00+02:00', 'Gillette Stadium · Boston',         'de', null, 'py', null, 1, 1, 3, 4, 'finished'),
   ('m32_4',  'r32', 4,  '2026-06-30T18:00:00-06:00', 'Estadio BBVA · Monterrey',          'nl', null, 'ma', null, 1, 1, 2, 3, 'finished'),
   ('m32_5',  'r32', 5,  '2026-06-30T15:00:00-07:00', 'BC Place · Vancouver',              'ci', null, 'no', null, 1, 2, null, null, 'finished'),
   ('m32_6',  'r32', 6,  '2026-07-01T18:00:00-04:00', 'MetLife Stadium · Nueva York/N.J.', 'fr', null, 'se', null, 3, 0, null, null, 'finished'),
@@ -145,14 +145,14 @@ insert into mundial2026.matches
   (id, round, "order", kickoff, venue,
    home_team, home_winner_of, away_team, away_winner_of,
    home_score, away_score, pen_home, pen_away, status) values
-  ('m16_1', 'r16', 1, '2026-07-04T15:00:00-05:00', 'NRG Stadium · Houston',             null, 'm32_1',  null, 'm32_4',  null, null, null, null, 'scheduled'),
-  ('m16_2', 'r16', 2, '2026-07-04T18:00:00-04:00', 'Lincoln Financial Field · Filadelfia', null, 'm32_3', null, 'm32_6', null, null, null, null, 'scheduled'),
-  ('m16_3', 'r16', 3, '2026-07-05T16:00:00-04:00', 'MetLife Stadium · Nueva York/N.J.', null, 'm32_2',  null, 'm32_5',  null, null, null, null, 'scheduled'),
-  ('m16_4', 'r16', 4, '2026-07-05T18:00:00-06:00', 'Estadio Azteca · Ciudad de México', null, 'm32_7',  null, 'm32_8',  null, null, null, null, 'scheduled'),
-  ('m16_5', 'r16', 5, '2026-07-06T15:00:00-05:00', 'AT&T Stadium · Dallas',             null, 'm32_12', null, 'm32_11', null, null, null, null, 'scheduled'),
-  ('m16_6', 'r16', 6, '2026-07-06T17:00:00-07:00', 'Lumen Field · Seattle',             null, 'm32_10', null, 'm32_9',  null, null, null, null, 'scheduled'),
-  ('m16_7', 'r16', 7, '2026-07-07T18:00:00-04:00', 'Mercedes-Benz Stadium · Atlanta',   null, 'm32_15', null, 'm32_14', null, null, null, null, 'scheduled'),
-  ('m16_8', 'r16', 8, '2026-07-07T16:00:00-07:00', 'BC Place · Vancouver',              null, 'm32_13', null, 'm32_16', null, null, null, null, 'scheduled');
+  ('m16_1', 'r16', 1, '2026-07-04T19:00:00+02:00', 'NRG Stadium · Houston',             null, 'm32_1',  null, 'm32_4',  null, null, null, null, 'scheduled'),
+  ('m16_2', 'r16', 2, '2026-07-04T23:00:00+02:00', 'Lincoln Financial Field · Filadelfia', null, 'm32_3', null, 'm32_6', null, null, null, null, 'scheduled'),
+  ('m16_3', 'r16', 3, '2026-07-05T22:00:00+02:00', 'MetLife Stadium · Nueva York/N.J.', null, 'm32_2',  null, 'm32_5',  null, null, null, null, 'scheduled'),
+  ('m16_4', 'r16', 4, '2026-07-06T02:00:00+02:00', 'Estadio Azteca · Ciudad de México', null, 'm32_7',  null, 'm32_8',  null, null, null, null, 'scheduled'),
+  ('m16_5', 'r16', 5, '2026-07-06T21:00:00+02:00', 'AT&T Stadium · Dallas',             null, 'm32_12', null, 'm32_11', null, null, null, null, 'scheduled'),
+  ('m16_6', 'r16', 6, '2026-07-07T02:00:00+02:00', 'Lumen Field · Seattle',             null, 'm32_10', null, 'm32_9',  null, null, null, null, 'scheduled'),
+  ('m16_7', 'r16', 7, '2026-07-07T18:00:00+02:00', 'Mercedes-Benz Stadium · Atlanta',   null, 'm32_15', null, 'm32_14', null, null, null, null, 'scheduled'),
+  ('m16_8', 'r16', 8, '2026-07-07T22:00:00+02:00', 'BC Place · Vancouver',              null, 'm32_13', null, 'm32_16', null, null, null, null, 'scheduled');
 
 -- ————— Cuartos (Round of 16 winners) —————
 
@@ -160,10 +160,10 @@ insert into mundial2026.matches
   (id, round, "order", kickoff, venue,
    home_team, home_winner_of, away_team, away_winner_of,
    home_score, away_score, pen_home, pen_away, status) values
-  ('qf_1', 'qf', 1, '2026-07-09T18:00:00-04:00', 'Gillette Stadium · Boston',       null, 'm16_1', null, 'm16_2', null, null, null, null, 'scheduled'),
-  ('qf_2', 'qf', 2, '2026-07-11T18:00:00-04:00', 'Hard Rock Stadium · Miami',       null, 'm16_3', null, 'm16_4', null, null, null, null, 'scheduled'),
-  ('qf_3', 'qf', 3, '2026-07-10T16:00:00-07:00', 'SoFi Stadium · Los Ángeles',      null, 'm16_5', null, 'm16_6', null, null, null, null, 'scheduled'),
-  ('qf_4', 'qf', 4, '2026-07-11T15:00:00-05:00', 'Arrowhead Stadium · Kansas City', null, 'm16_7', null, 'm16_8', null, null, null, null, 'scheduled');
+  ('qf_1', 'qf', 1, '2026-07-09T22:00:00+02:00', 'Gillette Stadium · Boston',       null, 'm16_1', null, 'm16_2', null, null, null, null, 'scheduled'),
+  ('qf_2', 'qf', 2, '2026-07-11T23:00:00+02:00', 'Hard Rock Stadium · Miami',       null, 'm16_3', null, 'm16_4', null, null, null, null, 'scheduled'),
+  ('qf_3', 'qf', 3, '2026-07-10T21:00:00+02:00', 'SoFi Stadium · Los Ángeles',      null, 'm16_5', null, 'm16_6', null, null, null, null, 'scheduled'),
+  ('qf_4', 'qf', 4, '2026-07-12T03:00:00+02:00', 'Arrowhead Stadium · Kansas City', null, 'm16_7', null, 'm16_8', null, null, null, null, 'scheduled');
 
 -- ————— Semifinales —————
 
@@ -171,8 +171,8 @@ insert into mundial2026.matches
   (id, round, "order", kickoff, venue,
    home_team, home_winner_of, away_team, away_winner_of,
    home_score, away_score, pen_home, pen_away, status) values
-  ('sf_1', 'sf', 1, '2026-07-14T19:00:00-05:00', 'AT&T Stadium · Dallas',           null, 'qf_1', null, 'qf_2', null, null, null, null, 'scheduled'),
-  ('sf_2', 'sf', 2, '2026-07-15T19:00:00-04:00', 'Mercedes-Benz Stadium · Atlanta', null, 'qf_3', null, 'qf_4', null, null, null, null, 'scheduled');
+  ('sf_1', 'sf', 1, '2026-07-14T21:00:00+02:00', 'AT&T Stadium · Dallas',           null, 'qf_1', null, 'qf_2', null, null, null, null, 'scheduled'),
+  ('sf_2', 'sf', 2, '2026-07-15T21:00:00+02:00', 'Mercedes-Benz Stadium · Atlanta', null, 'qf_3', null, 'qf_4', null, null, null, null, 'scheduled');
 
 -- ————— Final —————
 
@@ -180,4 +180,4 @@ insert into mundial2026.matches
   (id, round, "order", kickoff, venue,
    home_team, home_winner_of, away_team, away_winner_of,
    home_score, away_score, pen_home, pen_away, status) values
-  ('final_1', 'final', 1, '2026-07-19T15:00:00-04:00', 'MetLife Stadium · Nueva York/N.J.', null, 'sf_1', null, 'sf_2', null, null, null, null, 'scheduled');
+  ('final_1', 'final', 1, '2026-07-19T21:00:00+02:00', 'MetLife Stadium · Nueva York/N.J.', null, 'sf_1', null, 'sf_2', null, null, null, null, 'scheduled');
