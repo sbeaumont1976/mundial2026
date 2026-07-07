@@ -30,7 +30,7 @@ Todo vive en un **schema propio `mundial2026`** (aislado de `public`), así que
 puedes reutilizar un proyecto Supabase existente sin mezclar tablas.
 
 1. Usa tu proyecto de [supabase.com](https://supabase.com) (o crea uno).
-2. Abre el **SQL Editor**, pega el contenido de [`supabase/setup.sql`](supabase/setup.sql)
+2. Abre el **SQL Editor**, pega el contenido de [`supabase/setup.sql`](../supabase/setup.sql)
    y ejecútalo. Crea el schema `mundial2026`, sus tablas, los grants, activa RLS,
    registra `matches` en realtime y **carga todos los datos iniciales**
    (los mismos 32 equipos y 31 partidos del mock).
@@ -51,7 +51,7 @@ la usas tú desde el panel de Supabase para editar los datos a mano.
 ### Esquema y datos
 
 Todo el SQL (tablas, RLS y datos iniciales) está en
-[`supabase/setup.sql`](supabase/setup.sql), listo para pegar en el SQL Editor.
+[`supabase/setup.sql`](../supabase/setup.sql), listo para pegar en el SQL Editor.
 
 **Tabla `teams`**: `id`, `name`, `code` (código flag-icons: `es`, `ar`, `gb-eng`…).
 
